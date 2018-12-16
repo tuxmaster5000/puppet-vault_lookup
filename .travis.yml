@@ -1,4 +1,5 @@
 ---
+sudo: false
 dist: trusty
 language: ruby
 cache: bundler
@@ -6,8 +7,6 @@ before_install:
   - rm -f Gemfile.lock
 script:
   - 'bundle exec rake $CHECK'
-services:
-  - docker
 matrix:
   fast_finish: true
   include:
